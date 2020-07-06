@@ -1,4 +1,4 @@
-function hamburguer() {
+const hamburguer = () => {
     const hamburguer = document.getElementById('hamburguer');
     const bar = document.getElementById('bar');
     const hamburguer_list = document.getElementById('hamburguer_list');
