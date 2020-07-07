@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header__logo">angel andrade</h1>
+        <div><img class="header__logo" src="./public/img/logo.png" alt="logo"></div>
         <nav>
             <div class="nav__hamburguer" id="hamburguer">
                 <div class="hamburguer__bar" id="bar"></div>
@@ -18,7 +18,7 @@
                 <li><a href="#home"><img class="list__img scale" src="./public/img/header-logos/home.png" alt="logo-hamburguer"></a></li>
                 <li><a href="#about"><img class="list__img" src="./public/img/header-logos/about.png" alt="logo-hamburguer"></a></li>
                 <li><a href="#skills"><img class="list__img scale" src="./public/img/header-logos/skills.png" alt="logo-hamburguer"></a></li>
-                <li><a href="#work"><img class="list__img" src="./public/img/header-logos/works.png" alt="logo-hamburguer"></a></li>
+                <li><a href="#projects"><img class="list__img" src="./public/img/header-logos/works.png" alt="logo-hamburguer"></a></li>
                 <li><a href="#contact"><img class="list__img" src="./public/img/header-logos/contact.png" alt="logo-hamburguer"></a></li>
             </ul>
         </nav>
@@ -27,10 +27,10 @@
     <section class="home" id="home">
         <p>Hi my name is Angel and I'm Web Developer </p>
         <ul>
-            <li><a href="#"><img src="./public/img/social-media/instagram.png" alt="instagram-logo"></a></li>
-            <li><a href="#"><img src="./public/img/social-media/linkedin.png" alt="linkedin-logo"></a></li>
-            <li><a href="#"><img src="./public/img/social-media/twitter.png" alt="twitter-logo"></a></li>
-            <li><a href="#"><img src="./public/img/social-media/youtube.png" alt="youtube-logo"></a></li>
+            <li><a href="#"><img class="scale" src="./public/img/social-media/instagram.png" alt="instagram-logo"></a></li>
+            <li><a href="#"><img class="scale" src="./public/img/social-media/linkedin.png" alt="linkedin-logo"></a></li>
+            <li><a href="#"><img class="scale" src="./public/img/social-media/twitter.png" alt="twitter-logo"></a></li>
+            <li><a href="#"><img class="scale" src="./public/img/social-media/youtube.png" alt="youtube-logo"></a></li>
         </ul>
     </section>
 
@@ -48,16 +48,31 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
     </section>
 
-    <section class="work" id="work">
-        <h2><span>P</span><span>r</span><span>o</span><span>y</span><span>e</span><span>c</span><span>t</span><span>s</span></h2>
-        <div class="work__gallery">
-            <img class="gallery__img" src="./public/img/main-works/1.jpg" alt="">
-            <img class="gallery__img" src="./public/img/main-works/2.jpg" alt="">
-            <img class="gallery__img" src="./public/img/main-works/3.jpg" alt="">
-            <img class="gallery__img" src="./public/img/main-works/4.jpg" alt="">
-            <img class="gallery__img" src="./public/img/main-works/5.jpg" alt="">
-            <img class="gallery__img" src="./public/img/main-works/6.jpg" alt="">
+    <section class="projects" id="projects">
+        <h2><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h2>
+        <div class="projects__gallery">
+            <img src="./public/img/main-projects/1.jpg" alt="gallery-img1">
+            <img src="./public/img/main-projects/2.jpg" alt="gallery-img2">
+            <img src="./public/img/main-projects/3.jpg" alt="gallery-img3">
+            <img src="./public/img/main-projects/4.jpg" alt="gallery-img4">
+            <img src="./public/img/main-projects/5.jpg" alt="gallery-img5">
+            <img src="./public/img/main-projects/6.jpg" alt="gallery-img6">
         </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></h2>
+        <form class="form" action="#">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__input" id="name"  type="text">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" id="email" type="email">
+            <label class="form__label-textarea" for="textarea">Message</label>
+            <textarea class="form__textarea" id="textarea"></textarea>
+            <div>
+                <button class="form__btn">Submit</button>
+            </div>
+        </form>
     </section>
 
     <script src="./public/js/app.js"></script>
