@@ -8,72 +8,78 @@
     <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
-    <header class="header">
-        <div><img class="header__logo" src="./public/img/logo.png" alt="logo"></div>
-        <nav>
-            <div class="nav__hamburguer" id="hamburguer">
-                <div class="hamburguer__bar" id="bar"></div>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <img class="logo__img" src="./public/img/logo.png" alt="logo-aab">
             </div>
-            <ul class="nav__list" id="hamburguer_list">
-                <li><a id="nav_home" href="#home"><img class="list__img scale" src="./public/img/header-logos/home.png" alt="logo-hamburguer"></a></li>
-                <li><a id="nav_about" href="#about"><img class="list__img" src="./public/img/header-logos/about.png" alt="logo-hamburguer"></a></li>
-                <li><a id="nav_skills" href="#skills"><img class="list__img scale" src="./public/img/header-logos/skills.png" alt="logo-hamburguer"></a></li>
-                <li><a id="nav_projects" href="#projects"><img class="list__img" src="./public/img/header-logos/works.png" alt="logo-hamburguer"></a></li>
-                <li><a id="nav_contact" href="#contact"><img class="list__img" src="./public/img/header-logos/contact.png" alt="logo-hamburguer"></a></li>
-            </ul>
-        </nav>
+            <nav class="nav">
+                <div class="hamburguer" id="hamburguer">
+                    <div class="hamburguer__bar" id="bar"></div>
+                </div>
+                <ul class="menu-list" id="hamburguer_list">
+                    <li class="menu-list__item"><a class="menu-list__link" href="#home"><img class="menu-list__img menu-list__img--scale" src="./public/img/header-logos/home.png" alt="logo-hamburguer"></a></li>
+                    <li class="menu-list__item"><a class="menu-list__link" href="#about"><img class="menu-list__img" src="./public/img/header-logos/about.png" alt="logo-hamburguer"></a></li>
+                    <li class="menu-list__item"><a class="menu-list__link" href="#skills"><img class="menu-list__img menu-list__img--scale" src="./public/img/header-logos/skills.png" alt="logo-hamburguer"></a></li>
+                    <li class="menu-list__item"><a class="menu-list__link" href="#projects"><img class="menu-list__img" src="./public/img/header-logos/works.png" alt="logo-hamburguer"></a></li>
+                    <li class="menu-list__item"><a class="menu-list__link" href="#contact"><img class="menu-list__img" src="./public/img/header-logos/contact.png" alt="logo-hamburguer"></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="home" id="home">
-        <p>Hi my name is Angel and I'm Web Developer </p>
-        <ul>
-            <li><a href="#"><img class="scale" src="./public/img/social-media/instagram.png" alt="instagram-logo"></a></li>
-            <li><a href="#"><img class="scale" src="./public/img/social-media/linkedin.png" alt="linkedin-logo"></a></li>
-            <li><a href="#"><img class="scale" src="./public/img/social-media/twitter.png" alt="twitter-logo"></a></li>
-            <li><a href="#"><img class="scale" src="./public/img/social-media/youtube.png" alt="youtube-logo"></a></li>
-        </ul>
-    </section>
+    <main>
+        <section class="container-home" id="home">
+            <p class="main-text">Hi my name is Angel and I'm Web Developer</p>
+            <ul class="list">
+                <li class="list__item"><a class="list__link" href="#"><img class="scale" src="./public/img/social-media/instagram.png" alt="instagram-logo"></a></li>
+                <li class="list__item"><a class="list__link" href="#"><img class="scale" src="./public/img/social-media/linkedin.png" alt="linkedin-logo"></a></li>
+                <li class="list__item"><a class="list__link" href="#"><img class="scale" src="./public/img/social-media/twitter.png" alt="twitter-logo"></a></li>
+                <li class="list__item"><a class="list__link" href="#"><img class="scale" src="./public/img/social-media/youtube.png" alt="youtube-logo"></a></li>
+            </ul>
+        </section>
 
-    <section class="about" id="about">
-        <h2><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span><span> m</span><span>e</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
-        <p>Lorem ipsum dolor sit a Fugiat illum, voluptatibus natus inventore deserunt aut cupiditate quae impedit id provident? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corrupti?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
-    </section>
+        <section class="container-about" id="about">
+            <h2 class="title"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span><span> m</span><span>e</span></h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
+            <p class="text">Lorem ipsum dolor sit a Fugiat illum, voluptatibus natus inventore deserunt aut cupiditate quae impedit id provident? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corrupti?</p>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
+        </section>
 
-    <section class="skills" id="skills">
-        <h2><span>S</span><span>k</span><span>i</span><span>l</span><span>l</span><span>s</span><span> & </span><span>E</span><span>x</span><span>p</span><span>e</span><span>r</span><span>i</span><span>e</span><span>n</span><span>c</span><span>e</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
-        <p>Lorem ipsum dolor sit a Fugiat illum, voluptatibus natus inventore deserunt aut cupiditate quae impedit id provident? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corrupti?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
-    </section>
+        <section class="container-skills" id="skills">
+            <h2 class="title title--scale"><span>S</span><span>k</span><span>i</span><span>l</span><span>l</span><span>s</span><span> & </span><span>E</span><span>x</span><span>p</span><span>e</span><span>r</span><span>i</span><span>e</span><span>n</span><span>c</span><span>e</span></h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
+            <p class="text">Lorem ipsum dolor sit a Fugiat illum, voluptatibus natus inventore deserunt aut cupiditate quae impedit id provident? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corrupti?</p>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor!</p>
+        </section>
 
-    <section class="projects" id="projects">
-        <h2><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h2>
-        <div class="projects__gallery">
-            <img src="./public/img/main-projects/1.jpg" alt="gallery-img1">
-            <img src="./public/img/main-projects/2.jpg" alt="gallery-img2">
-            <img src="./public/img/main-projects/3.jpg" alt="gallery-img3">
-            <img src="./public/img/main-projects/4.jpg" alt="gallery-img4">
-            <img src="./public/img/main-projects/5.jpg" alt="gallery-img5">
-            <img src="./public/img/main-projects/6.jpg" alt="gallery-img6">
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></h2>
-        <form class="form" action="#">
-            <label class="form__label" for="name">Name</label>
-            <input class="form__input" id="name"  type="text">
-            <label class="form__label" for="email">Email</label>
-            <input class="form__input" id="email" type="email">
-            <label class="form__label-textarea" for="textarea">Message</label>
-            <textarea class="form__textarea" id="textarea"></textarea>
-            <div>
-                <button class="form__btn">Submit</button>
+        <section class="container-projects" id="projects">
+            <h2 class="title title--margin"><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h2>
+            <div class="gallery">
+                <img class="gallery__img" src="./public/img/main-projects/1.jpg" alt="gallery-img1">
+                <img class="gallery__img" src="./public/img/main-projects/2.jpg" alt="gallery-img2">
+                <img class="gallery__img" src="./public/img/main-projects/3.jpg" alt="gallery-img3">
+                <img class="gallery__img" src="./public/img/main-projects/4.jpg" alt="gallery-img4">
+                <img class="gallery__img" src="./public/img/main-projects/5.jpg" alt="gallery-img5">
+                <img class="gallery__img" src="./public/img/main-projects/6.jpg" alt="gallery-img6">
             </div>
-        </form>
-    </section>
+        </section>
+
+        <section class="container-contact" id="contact">
+            <h2><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></h2>
+            <form class="form" action="#">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" id="name"  type="text">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" id="email" type="email">
+                <label class="form__label-textarea" for="textarea">Message</label>
+                <textarea class="form__textarea" id="textarea"></textarea>
+                <div>
+                    <button class="form__btn">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <script src="./public/js/app.js"></script>
 </body>
