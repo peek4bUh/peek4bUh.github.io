@@ -16,25 +16,23 @@ const hamburguer = () => {
     }));
 }
 
-hamburguer();
-
 const scrollAppear = () => {
     // Crear la variable
-    const mainText = document.querySelector('.main-text');
+    const introText = document.querySelector('.intro-text');
     const list = document.querySelector('.list');
     // Para saber la posicion del elemento
-    const introPosition = mainText.getBoundingClientRect().top;
+    const introPosition = introText.getBoundingClientRect().top;
     // Para los distintos tipos de pantallas
     const screenPosition = window.innerHeight;
 
     if(introPosition < screenPosition){
-        mainText.classList.add('main-text--appears');
+        introText.classList.add('intro-text--appears');
         list.classList.add('list--appears');
     }
 }
 
 scrollAppear();
-
+hamburguer();
 
 
 
