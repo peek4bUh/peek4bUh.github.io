@@ -1,0 +1,155 @@
+@import '../modules/variables';
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    width: 100%;
+    height: 10vh;   
+    background-color: $bg-color;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.logo {
+
+    &__img {
+        width: 48px;
+        margin-top: 7px;
+    }
+}
+
+.hamburguer {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    &__bar {
+        position: relative;
+        width: 40px;
+        height: 5px;
+        background-color: $primary-color;
+    
+        &::before, 
+        &::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 5px;
+            background-color: $primary-color;
+            position: absolute;
+            top: -11px;
+            transition: all .3s;
+    
+        }
+    
+        &::after {
+            top: 11px;
+        }
+
+        // javascript class
+        &--open {
+            height: 0;
+        
+            &::before,
+            &::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.menu-list {
+    background-color: $bg-color;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: transform .45s ease-in-out;
+
+    &__item {
+        width: 20%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        text-align: center;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary-color;
+        text-decoration: none;
+        font-size: 1.3rem;
+
+        span {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 24px;
+
+        &--scale {
+            width: 20px;
+        }
+    }
+
+    // javascript class
+    &--open {
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (min-width:600px) {
+    .nav {
+        width: 100%;
+        max-width: 670px;
+    }
+
+    .hamburguer {
+        display: none;
+    }
+
+    .logo__img {
+        margin-top: 2px;
+    }
+
+    .menu-list {
+        position: static;
+        transform: translateX(0);
+        justify-content: space-between;
+
+        &__item {
+            width: 80px;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__link {
+
+            span {
+                display: inline;
+            }
+        }
+
+    }
+}
