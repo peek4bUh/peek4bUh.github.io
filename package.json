@@ -1,7 +1,8 @@
 {
-  "name": "bizarre-binary",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "peek4bUh.github.io",
+  "version": "0.2.1",
+  "description": "Personal Website",
+  "author": "Angel (peek4bUh) Andrade <aandradeb99@gmail.com>",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
