@@ -3,6 +3,8 @@
   "version": "0.2.1",
   "description": "Personal Website",
   "author": "Angel (peek4bUh) Andrade <aandradeb99@gmail.com>",
+  "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
