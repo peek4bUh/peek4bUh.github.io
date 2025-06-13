@@ -1,0 +1,127 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Personal portfolio" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-bg: #0d1117;
+		--color-text: #f0f6fc;
+		--color-text-secondary: #8b949e;
+		--color-accent: #58a6ff;
+		--color-border: #30363d;
+		--color-card: #161b22;
+		--color-hover: #21262d;
+	}
+	
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+		background: var(--color-bg);
+		color: var(--color-text);
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+	
+	a {
+		color: var(--color-accent);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 600;
+		line-height: 1.2;
+	}
+	
+	p {
+		line-height: 1.6;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	
+	.section {
+		padding: 5rem 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+	
+	.section:last-child {
+		border-bottom: none;
+	}
+	
+	.card {
+		background-color: var(--color-card);
+		border: 1px solid var(--color-border);
+		border-radius: 6px;
+		padding: 1.5rem;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	
+	.card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	}
+	
+	.btn {
+		display: inline-block;
+		background-color: var(--color-hover);
+		color: var(--color-text);
+		border: 1px solid var(--color-border);
+		border-radius: 6px;
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+	}
+	
+	.btn:hover {
+		background-color: var(--color-border);
+		text-decoration: none;
+	}
+	
+	.btn-primary {
+		background-color: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+	
+	.btn-primary:hover {
+		background-color: #4589d1;
+		border-color: #4589d1;
+	}
+</style>
