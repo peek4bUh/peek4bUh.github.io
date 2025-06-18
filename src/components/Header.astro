@@ -1,187 +1,48 @@
 ---
-import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+import Hamburger from '../components/Hamburger.astro';
+import HamburgerMenu from '../components/HamburgerMenu.astro';
 ---
 
-<header class='fixed top-0 flex w-full h-[100px] px-8 shadow-2xl z-100'>
+<header
+  id='header'
+  class='fixed top-0 flex w-full h-[100px] px-8 shadow-2xl bg-(--color-bg) transition-all duration-300 ease-in-out transform z-50'
+>
   <nav class='w-full flex justify-between items-center'>
-    <div class='logo z-10'>
-      <a class='text-4xl font-bold' href='/'>AA</a>
-    </div>
-
-    <div id='hamburger' class='cursor-pointer w-18 p-4 -mr-4 not-active z-10'>
-      <span class='block h-[3px] bg-(--color-text) relative'></span>
-      <span class='block h-[3px] bg-(--color-text) mt-[8px] relative'></span>
-      <span class='block h-[3px] bg-(--color-text) mt-[8px] relative'></span>
-    </div>
+    <Logo />
+    <Hamburger />
   </nav>
-  <aside
-    id='hamburger-menu'
-    class='flex flex-col justify-between fixed top-0 right-0 bottom-0 pt-[100px] w-full h-screen bg-red-500 not-active-menu'
-  >
-    <nav class='w-full h-[70vh] flex justify-center items-center'>
-      <ol
-        class='w-full h-[100%] flex flex-col justify-evenly items-center text-4xl font-bold uppercase'
-      >
-        <li class='py-1.5'>
-          <a class='py-1' href='/#about'>About</a>
-        </li>
-        <li>
-          <a class='py-1' href='/#experience'>Experience</a>
-        </li>
-        <li>
-          <a class='py-1' href='/#projects'>Projects</a>
-        </li>
-        <li>
-          <a class='py-1' href='/#contact'>Contact</a>
-        </li>
-      </ol>
-    </nav>
-    <div
-      class='w-full h-[calc(30vh-100px)] flex justify-around items-center text-2xl font-bold uppercase'
-    >
-      <a href='https://www.notes.aandradeb.com/'>Notes</a>
-      <a href='https://www.notes.aandradeb.com/blog'>Blog</a>
-    </div>
-  </aside>
+  <HamburgerMenu />
 </header>
 <script src='../scripts/hamburger.js'></script>
+<script>
+  const header = document.getElementById('header');
+  let lastScroll = 0;
 
-<style>
-  .not-active span:nth-child(1) {
-    animation: ease 0.4s top-2 forwards;
-  }
+  window.addEventListener('scroll', () => {
+    const currentScroll =
+      window.pageYOffset || document.documentElement.scrollTop;
 
-  .not-active span:nth-child(2) {
-    animation: ease 0.4s scaled-2 forwards;
-  }
-
-  .not-active span:nth-child(3) {
-    animation: ease 0.4s bottom-2 forwards;
-  }
-
-  .active span:nth-child(1) {
-    animation: ease 0.4s top forwards;
-  }
-
-  .active span:nth-child(2) {
-    animation: ease 0.4s scaled forwards;
-  }
-
-  .active span:nth-child(3) {
-    animation: ease 0.4s bottom forwards;
-  }
-
-  @keyframes top {
-    0% {
-      top: 0;
-      transform: rotate(0);
+    // Height shrink/expand logic
+    if (currentScroll > 0) {
+      header.classList.remove('h-[100px]');
+      header.classList.add('h-[70px]');
+      header.classList.remove('bg-(--color-bg)');
+      header.classList.add('bg-[#25282e]');
+    } else {
+      header.classList.remove('h-[70px]');
+      header.classList.add('h-[100px]');
+      header.classList.remove('bg-[#25282e]');
+      header.classList.add('bg-(--color-bg)');
     }
-    50% {
-      top: 11px;
-      transform: rotate(0);
-    }
-    100% {
-      top: 11px;
-      transform: rotate(45deg);
-    }
-  }
 
-  @keyframes top-2 {
-    0% {
-      top: 12px;
-      transform: rotate(45deg);
+    // Hide on scroll down, show on scroll up
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      header.classList.add('-translate-y-full');
+    } else {
+      header.classList.remove('-translate-y-full');
     }
-    50% {
-      top: 12px;
-      transform: rotate(0deg);
-    }
-    100% {
-      top: 0;
-      transform: rotate(0deg);
-    }
-  }
 
-  @keyframes bottom {
-    0% {
-      bottom: 0;
-      transform: rotate(0);
-    }
-    50% {
-      bottom: 11px;
-      transform: rotate(0);
-    }
-    100% {
-      bottom: 11px;
-      transform: rotate(135deg);
-    }
-  }
-
-  @keyframes bottom-2 {
-    0% {
-      bottom: 12px;
-      transform: rotate(135deg);
-    }
-    50% {
-      bottom: 12px;
-      transform: rotate(0);
-    }
-    100% {
-      bottom: 0;
-      transform: rotate(0);
-    }
-  }
-
-  @keyframes scaled {
-    50% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-
-  @keyframes scaled-2 {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  .not-active-menu {
-    display: none;
-  }
-
-  .active-menu {
-  }
-
-  .logo a {
-    color: var(--color-text);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--color-text-secondary);
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-
-  @media (max-width: 768px) {
-    .nav-links {
-      gap: 1rem;
-    }
-  }
-</style>
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
