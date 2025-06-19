@@ -4,18 +4,20 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Projects from '../components/Projects.astro';
 import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import GridLines from '../components/GridLines.astro';
 ---
 
-<Layout title="Angel Andrade">
+<Layout title='Angel Andrade'>
   <Header />
-  <main>
-    <GridLines />
+  <main class='px-8'>
+    <!-- <GridLines /> -->
     <Hero />
     <Projects />
     <About />
+    <Experience />
     <Contact />
   </main>
   <Footer />
