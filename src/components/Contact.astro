@@ -1,54 +1,17 @@
----
----
-
-<section id="contact" class="section">
-  <div class="container">
-    <h2 class="section-title">Get In Touch</h2>
-    <p class="section-subtitle">Have a project in mind? Let's work together.</p>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <h3>Email</h3>
-          <p><a href="mailto:hello@example.com">hello@example.com</a></p>
-        </div>
-        
-        <div class="contact-item">
-          <h3>Location</h3>
-          <p>San Francisco, CA</p>
-        </div>
-        
-        <div class="contact-item">
-          <h3>Social</h3>
-          <div class="social-links">
-            <a href="#" class="social-link">GitHub</a>
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">Twitter</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="contact-form-container">
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
-    </div>
+<section id='contact' class='section'>
+  <div class='container'>
+    <h2 class='section-title'>Get In Touch</h2>
+    <p class='section-subtitle'>
+      While I’m not exploring new roles right now, I'm always open to meaningful
+      conversations. Feel free to reach out. I'm always happy to connect and
+      hear new projects.
+    </p>
+    <a
+      class='btn btn-primary'
+      href='mailto:aandradeb99@gmail.com'
+      rel='noopener noreferrer'
+      target='_blank'>Say Hello</a
+    >
   </div>
 </section>
 
@@ -64,67 +27,13 @@
     margin-bottom: 3rem;
   }
 
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .contact-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-accent);
-  }
-
-  .contact-item p {
-    color: var(--color-text-secondary);
-  }
-
-  .social-links {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .social-link {
-    color: var(--color-text-secondary);
-    transition: color 0.2s ease;
-  }
-
-  .social-link:hover {
-    color: var(--color-accent);
-  }
-
-  .contact-form-container {
-    background-color: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 2rem;
-  }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
   label {
     font-size: 0.875rem;
     font-weight: 500;
   }
 
-  input, textarea {
+  input,
+  textarea {
     background-color: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 4px;
@@ -135,19 +44,13 @@
     transition: border-color 0.2s ease;
   }
 
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     outline: none;
     border-color: var(--color-accent);
   }
 
   button {
     align-self: flex-start;
-  }
-
-  @media (max-width: 768px) {
-    .contact-container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
   }
 </style>
