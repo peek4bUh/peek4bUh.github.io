@@ -1,14 +1,21 @@
 ---
+import '../styles/global.css';
 const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <a href="/">Portfolio</a>
+  <div class='container'>
+    <div class='footer-content'>
+      <div class='footer-logo'>
+        <a href='/'>Portfolio</a>
       </div>
-      <p class="copyright">© {currentYear} John Doe. All rights reserved.</p>
+      <ul class='flex text-sm text-gray-500 dark:text-gray-400'>
+        <li class='after:content-["·"] after:mx-2'>Notes</li>
+        <li>Blog</li>
+      </ul>
+      <p class='copyright'>
+        © 2020-{currentYear} Angel Andrade
+      </p>
     </div>
   </div>
 </footer>
