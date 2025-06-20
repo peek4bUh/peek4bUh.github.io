@@ -1,24 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Projects from '../components/Projects.astro';
-import About from '../components/About.astro';
-import Experience from '../components/Experience.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
-import GridLines from '../components/GridLines.astro';
+import Layout from "../layouts/Layout.astro";
+
+import SectionContainer from "../components/SectionContainer.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Experience from "../components/Experience.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title='Angel Andrade'>
+<Layout title="Angel Andrade">
   <Header />
-  <main class='px-8'>
-    <!-- <GridLines /> -->
-    <Hero />
-    <About />
-    <Experience />
-    <Projects />
-    <Contact />
+
+  <main class="px-8">
+    <SectionContainer class="flex items-center min-h-screen">
+      <Hero />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="contact">
+      <Contact />
+    </SectionContainer>
   </main>
+
   <Footer />
 </Layout>

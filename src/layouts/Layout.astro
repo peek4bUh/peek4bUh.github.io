@@ -1,73 +1,48 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en' class='scroll-smooth'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content='Personal portfolio' />
-		<meta name='viewport' content='width=device-width' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Personal portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	.container {
-		width: 100%;
-		max-width: 1000px;
-		margin: 0 auto;
-	}
+  .btn {
+    display: inline-block;
+    background-color: var(--color-hover);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
 
-	.section {
-		padding: 5rem 0;
-	}
+  .btn:hover {
+    background-color: var(--color-border);
+    text-decoration: none;
+  }
 
-	.card {
-		background-color: var(--color-card);
-		border: 1px solid var(--color-border);
-		border-radius: 6px;
-		padding: 1.5rem;
-		transition:
-			transform 0.2s ease,
-			box-shadow 0.2s ease;
-	}
+  .btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
 
-	.card:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-	}
-
-	.btn {
-		display: inline-block;
-		background-color: var(--color-hover);
-		color: var(--color-text);
-		border: 1px solid var(--color-border);
-		border-radius: 6px;
-		padding: 0.5rem 1rem;
-		font-size: 0.875rem;
-		font-weight: 500;
-		cursor: pointer;
-		transition: background-color 0.2s ease;
-	}
-
-	.btn:hover {
-		background-color: var(--color-border);
-		text-decoration: none;
-	}
-
-	.btn-primary {
-		background-color: var(--color-accent);
-		border-color: var(--color-accent);
-	}
-
-	.btn-primary:hover {
-		background-color: #4589d1;
-		border-color: #4589d1;
-	}
+  .btn-primary:hover {
+    background-color: #4589d1;
+    border-color: #4589d1;
+  }
 </style>

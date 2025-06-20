@@ -1,66 +1,60 @@
 ---
-import ExperienceItem from './ExperienceItem.astro';
+import TitleSection from "./TitleSection.astro";
+import ExperienceItem from "./ExperienceItem.astro";
 
 const jobs = [
   {
-    title: 'Junior Full Stack Developer',
-    companyName: 'Getronics',
-    companyUrl: 'https://www.getronics.com/',
-    workplace: 'Remote',
-    date: 'Oct 2023 – Present',
+    title: "Junior Full Stack Developer",
+    companyName: "Getronics",
+    link: "https://www.getronics.com/",
+    workplace: "Remote",
+    date: "Oct 2023 – Present",
     description:
-      'Document your fitness journey, visualize progress, and achieve your goals without any cost or limitations.',
-    tags: ['Java', 'TortoiseSVN', 'PL/SQL', 'JSF', 'JSP', 'Spring Boot'],
-    code: '#',
+      "Document your fitness journey, visualize progress, and achieve your goals without any cost or limitations.",
+    tags: ["Java", "TortoiseSVN", "PL/SQL", "JSF", "JSP", "Spring Boot"],
   },
   {
-    title: 'Backend Developer',
-    companyName: 'Getronics (Internship)',
-    companyUrl: 'https://www.getronics.com/',
-    workplace: 'Hybrid',
-    date: 'Mar 2023 – Jun 2023',
-    description: 'Creation of tests for APIs used at INDITEX.',
-    tags: ['Java', 'Git', 'Spring Boot', 'GitHub', 'Hexagonal Architecture'],
-    code: '#',
+    title: "Backend Developer",
+    companyName: "Getronics (Internship)",
+    link: "https://www.getronics.com/",
+    workplace: "Hybrid",
+    date: "Mar 2023 – Jun 2023",
+    description: "Creation of tests for APIs used at INDITEX.",
+    tags: ["Java", "Git", "Spring Boot", "GitHub", "Hexagonal Architecture"],
   },
   {
-    title: 'QA Tester',
-    companyName: 'Accenture España (Internship)',
-    companyUrl: 'https://www.accenture.com/es-es',
-    workplace: 'Hybrid',
-    date: 'Mar 2022 – Jun 2022',
+    title: "QA Tester",
+    companyName: "Accenture España (Internship)",
+    link: "https://www.accenture.com/es-es",
+    workplace: "Hybrid",
+    date: "Mar 2022 – Jun 2022",
     description:
-      'Testing an application similar to Kahoot! on Android and iOS.',
-    tags: ['Kotlin', 'Xcode', 'Android Studio', 'Jira', 'Scrum'],
-    code: '#',
+      "Testing an application similar to Kahoot! on Android and iOS.",
+    tags: ["Kotlin", "Xcode", "Android Studio", "Jira", "Scrum"],
   },
   {
-    title: 'System Administrator',
-    companyName: 'Oesia (Internship)',
-    companyUrl: 'https://grupooesia.com/',
-    workplace: 'On-site',
-    date: 'Oct 2023 – Present',
+    title: "System Administrator",
+    companyName: "Oesia (Internship)",
+    link: "https://grupooesia.com/",
+    workplace: "On-site",
+    date: "Oct 2023 – Present",
     description:
-      'Perform computer maintenance and prepare workstations for new clients.',
-    tags: ['Windows 10', 'Powershell', 'Ubuntu', 'Bash Scripting'],
-    code: '#',
+      "Perform computer maintenance and prepare workstations for new clients.",
+    tags: ["Windows 10", "Powershell", "Ubuntu", "Bash Scripting"],
   },
 ];
 ---
 
-<section id='experience' class='section'>
-  <h2 class='text-3xl mb-8'>Work Experience</h2>
-  <p class='mb-12 text-gray-400'>
-    Companies I have worked for, along with my roles and responsibilities.
-  </p>
-
-  <ol class='relative border-s border-gray-700'>
-    {
-      jobs.map((experience) => (
-        <li class='mb-10 ms-4'>
-          <ExperienceItem {...experience} />
-        </li>
-      ))
-    }
-  </ol>
-</section>
+<TitleSection>Work Experience</TitleSection>
+<p class="text-lg mb-12 text-gray-400">
+  Companies I have worked for, along with my roles and responsibilities.
+</p>
+<ol class="relative border-s border-gray-700">
+  {
+    jobs.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

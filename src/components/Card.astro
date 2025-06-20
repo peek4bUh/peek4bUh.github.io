@@ -1,0 +1,50 @@
+---
+import CodeIcon from "./icons/Code.astro";
+import ArrowExternalLinkIcon from "./icons/ArrowExternalLink.astro";
+
+import Tag from "./Tag.astro";
+import LinkButton from "./LinkButton.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  img: string;
+  source: string;
+  live: string;
+  tags: string;
+}
+
+const { title, description, img, source, live, tags } = Astro.props;
+---
+
+<article
+  class="bg-(--color-card) rounded-md p-4 border border-solid border-(--color-border) flex flex-col h-full"
+>
+  <div class="mb-6">
+    <div
+      class="relative flex flex-col items-center col-span-6 row-span-5 gap-8"
+    >
+      <img
+        alt="Recién llegado vs 5 años en Nueva Zelanda"
+        class="object-cover object-top w-full h-56 rounded-md"
+        loading="lazy"
+        src={img}
+      />
+    </div>
+  </div>
+  <h3 class="text-2xl mb-4">{title}</h3>
+  <p class="text-(--color-text-secondary) mb-[1.5rem] grow">
+    {description}
+  </p>
+  <ul class="flex flex-wrap gap-[0.5rem] mb-[1.5rem]">
+    {tags.map((tag) => <Tag name={tag} />)}
+  </ul>
+  <footer class="flex justify-start gap-x-4">
+    <LinkButton href={source}>
+      <CodeIcon />
+    </LinkButton>
+    <LinkButton href={live}>
+      <ArrowExternalLinkIcon />
+    </LinkButton>
+  </footer>
+</article>
