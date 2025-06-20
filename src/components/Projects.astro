@@ -1,4 +1,7 @@
 ---
+import CodeIcon from './icons/Code.astro';
+import ArrowExternalLink from './icons/ArrowExternalLink.astro';
+
 const projects = [
   {
     title: 'My Fitness Journey',
@@ -55,9 +58,25 @@ const projects = [
                 </span>
               ))}
             </div>
-            <a href={project.link} class='project-link'>
-              View Project
-            </a>
+            <div class='flex'>
+              <a
+                class='mr-3'
+                href={project.source}
+                target='_blank'
+                aria-label='GitHub'
+                title='GitHub'
+              >
+                <CodeIcon />
+              </a>
+              <a
+                href={project.live}
+                target='_blank'
+                aria-label='Live Demo'
+                title='Live Demo'
+              >
+                <ArrowExternalLink />
+              </a>
+            </div>
           </div>
         ))
       }
