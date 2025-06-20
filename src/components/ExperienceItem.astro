@@ -1,0 +1,53 @@
+---
+import ArrowLink from './icons/ArrowLink.astro';
+
+interface Props {
+    title: string;
+    companyName: string;
+    companyUrl: string;
+    workplace: string;
+    date: string;
+    description: string;
+    link?: string;
+    tags: [string];
+    code: string;
+}
+
+const {
+    title,
+    companyName,
+    companyUrl,
+    workplace,
+    date,
+    description,
+    link,
+    tags,
+    code,
+} = Astro.props;
+---
+
+<div
+    class='absolute w-3 h-3 rounded-full mt-2 -start-1.5 border border-gray-900 bg-gray-700'
+>
+</div>
+<h3 class='mb-1 text-xl font-semibold text-white'>
+    <a href={companyUrl} target='_blank' rel='noreferrer'>
+        {title}<ArrowLink class='inline ml-1' /></a
+    >
+    <h4 class='mb-2 text-base font-normal leading-none text-gray-200'>
+        {companyName} · {workplace}
+    </h4>
+    <time class='block mb-2 text-sm font-normal leading-none text-gray-200'>
+        {date}
+    </time>
+    <p class='mb-4 text-base font-normal text-gray-500'>
+        {description}
+    </p>
+    <ul class='flex flex-wrap gap-2.5 mb-2 text-sm'>
+        {
+            tags.map((tag) => (
+                <li class='bg-slate-700 px-2 py-1 rounded-sm'>{tag}</li>
+            ))
+        }
+    </ul>
+</h3>
