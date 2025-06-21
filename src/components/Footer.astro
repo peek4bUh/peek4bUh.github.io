@@ -1,58 +1,11 @@
 ---
-import Logo from './Logo.astro';
-
 const currentYear = new Date().getFullYear();
 ---
 
-<footer>
-  <div class='container'>
-    <div class='footer-content'>
-      <Logo class='footer-logo' />
-      <ul class='flex text-sm text-gray-500 dark:text-gray-400'>
-        <li class='after:content-["·"] after:mx-2'>Notes</li>
-        <li>Blog</li>
-      </ul>
-      <p class='copyright'>
-        © 2020-{currentYear} Angel Andrade
-      </p>
-    </div>
+<footer class="px-8 mt-8">
+  <div class="py-8 border-t border-t-(--color-border)">
+    <p class="text-(--color-text-secondary) text-sm text-center">
+      © 2020-{currentYear} Angel Andrade.
+    </p>
   </div>
 </footer>
-
-<style>
-  footer {
-    padding: 2rem 0;
-    margin-top: 4rem;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-border);
-  }
-
-  .footer-logo a {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-text);
-  }
-
-  .footer-logo a:hover {
-    text-decoration: none;
-  }
-
-  .copyright {
-    color: var(--color-text-secondary);
-    font-size: 0.875rem;
-  }
-
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
-  }
-</style>

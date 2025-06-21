@@ -8,41 +8,31 @@ const PROJECTS = [
     description:
       "Document your fitness journey, visualize progress, and achieve your goals without any cost or limitations. ",
     tags: ["Flask", "SQLite", "Tailwind CSS"],
-    img: "/projects/example-img.jpg",
+    img: "/projects/my-fitness-journey.webp",
     source: "https://github.com/peek4bUh/my-fitness-journey",
-    live: "#",
+    titleRibbon: "In Progress",
   },
   {
     title: "View My Country",
     description:
       "A simple project to display a bunch of countries with its information.",
     tags: ["React"],
-    img: "/projects/example-img.jpg",
+    img: "/projects/view-my-country.webp",
     source: "https://github.com/peek4bUh/view-my-country",
-    live: "#",
   },
   {
     title: "Pyfik",
     description: "A simple and basic monitoring tool made in Tkinter.",
     tags: ["Python", "Tkinter"],
-    img: "/projects/example-img.jpg",
+    img: "/projects/pyfik.webp",
     source: "https://github.com/peek4bUh/pyfik",
-    live: "#",
-  },
-  {
-    title: "Password Generator",
-    description: " A simple and basic monitoring tool made in Tkinter.",
-    tags: ["Java"],
-    img: "/projects/example-img.jpg",
-    source: "https://github.com/peek4bUh/password-generator",
-    live: "#",
   },
 ];
 ---
 
 <div>
   <TitleSection>Projects</TitleSection>
-  <p class="text-lg mb-8">Some of my recent work</p>
+  <p class="mb-8 text-gray-400">Some of my recent work</p>
 
   <div
     class="grid gap-[2rem] grid-cols-[repeat(auto-fill, minmax(300px, 1fr))]"
@@ -56,6 +46,7 @@ const PROJECTS = [
           live={project.live}
           tags={project.tags}
           img={project.img}
+          titleRibbon={project.titleRibbon}
         />
       ))
     }

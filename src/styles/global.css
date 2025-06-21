@@ -18,6 +18,7 @@ html {
     background: var(--color-bg);
     color: var(--color-text);
     font-family: monospace;
+    font-size: 16px;
 }
 
 a {

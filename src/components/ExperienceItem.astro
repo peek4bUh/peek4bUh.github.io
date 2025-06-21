@@ -24,20 +24,20 @@ const { title, companyName, workplace, date, description, link, tags } =
   class="absolute w-3 h-3 rounded-full mt-2 -start-1.5 border border-gray-900 bg-gray-700"
 >
 </div>
-<h3 class="mb-1 text-2xl text-(--color-text)">
+<h3 class="mb-1 text-lg font-semibold text-(--color-text)">
   <a href={link} target="_blank" rel="noreferrer">
     {title}<ArrowLink class="inline ml-1" /></a
   >
 </h3>
-<h4 class="mb-2 text-base font-normal text-gray-200">
+<h4 class="mb-2 text-sm font-normal text-gray-200">
   {companyName} · {workplace}
 </h4>
-<time class="block mb-2 text-sm font-normal leading-none text-gray-200">
+<time class="block mb-2 text-xs font-normal leading-none text-gray-200">
   {date}
 </time>
 <p class="mb-4 text-gray-500">
   {description}
 </p>
-<ul class="flex flex-wrap gap-2.5 mb-2 text-">
+<ul class="flex flex-wrap gap-2.5 mb-2">
   {tags.map((tag) => <Tag name={tag} />)}
 </ul>
