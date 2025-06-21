@@ -1,0 +1,48 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="stack-top">{title}</div>
+
+<style>
+  .stack-top {
+    --d: 5px;
+    --g: 16px;
+    --c: #333;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(29.29%, -100%) rotate(45deg);
+    color: #fff;
+    text-align: center;
+    width: auto;
+    min-width: 120px;
+    padding: 5px 10px;
+    transform-origin: bottom left;
+    background:
+      linear-gradient(
+          135deg,
+          transparent var(--g),
+          var(--c) calc(var(--g) - 0.3px)
+        )
+        left,
+      linear-gradient(
+          -135deg,
+          transparent var(--g),
+          var(--c) calc(var(--g) - 0.3px)
+        )
+        right;
+    background-size: 51% 100%;
+    background-repeat: no-repeat;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      calc(100% - var(--d)) calc(100% - var(--d)),
+      var(--d) calc(100% - var(--d)),
+      0 100%
+    );
+    white-space: nowrap;
+  }
+</style>
