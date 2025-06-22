@@ -45,16 +45,18 @@ const jobs = [
 ];
 ---
 
-<TitleSection>Work Experience</TitleSection>
-<p class="mb-12 text-gray-400">
-  Companies I have worked for, along with my roles and responsibilities.
-</p>
-<ol class="relative border-s border-gray-700">
-  {
-    jobs.map((experience) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
-</ol>
+<div class="max-w-lg sm:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
+  <TitleSection>Work Experience</TitleSection>
+  <p class="mb-12 text-gray-400 xl:text-xl">
+    Companies I have worked for, along with my roles and responsibilities.
+  </p>
+  <ol class="relative border-s border-gray-700">
+    {
+      jobs.map((experience) => (
+        <li class="mb-10 ms-4">
+          <ExperienceItem {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</div>

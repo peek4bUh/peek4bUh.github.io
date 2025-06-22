@@ -15,7 +15,7 @@ import Footer from "../components/Footer.astro";
   <Header />
 
   <main class="px-8">
-    <SectionContainer class="flex items-center min-h-screen">
+    <SectionContainer class="items-center min-h-screen">
       <Hero />
     </SectionContainer>
 
@@ -23,7 +23,7 @@ import Footer from "../components/Footer.astro";
       <AboutMe />
     </SectionContainer>
 
-    <SectionContainer id="experience">
+    <SectionContainer id="experience" class="flex-col items-center">
       <Experience />
     </SectionContainer>
 
@@ -31,7 +31,7 @@ import Footer from "../components/Footer.astro";
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="contact" class="flex justify-center">
+    <SectionContainer id="contact">
       <Contact />
     </SectionContainer>
   </main>

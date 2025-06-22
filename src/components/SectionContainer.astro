@@ -2,6 +2,10 @@
 const { class: className, id } = Astro.props;
 ---
 
-<section id={id} data-section={id} class={`py-[5rem] ${className}`}>
-    <slot />
+<section
+  id={id}
+  data-section={id}
+  class={`flex justify-center py-20 xl: ${className}`}
+>
+  <slot />
 </section>
