@@ -1,57 +1,55 @@
 <aside
-    id='hamburger-menu'
-    class='flex flex-col justify-between fixed top-0 right-0 bottom-0 pt-[100px] w-full h-screen bg-[#25282E] not-active-menu'
+  id="hamburger-menu"
+  class="flex flex-col justify-between fixed top-0 right-0 bottom-0 pt-[100px] w-full h-screen bg-[#25282E] not-active-menu"
 >
-    <nav class='w-full h-[75vh] flex justify-center items-center'>
-        <ol
-            class='w-full h-[100%] flex flex-col justify-evenly items-center text-4xl font-bold uppercase'
+  <nav class="w-full h-[75vh] flex justify-center items-center">
+    <ol
+      class="w-full h-[100%] flex flex-col justify-evenly items-center text-4xl font-bold uppercase"
+    >
+      <li class="py-1.5">
+        <a class="text-(--color-text)" href="/#about">About</a>
+      </li>
+      <li>
+        <a class="text-(--color-text)" href="/#experience">Experience</a>
+      </li>
+      <li>
+        <a class="text-(--color-text)" href="/#projects">Projects</a>
+      </li>
+      <li>
+        <a class="text-(--color-text)" href="/#contact">Contact</a>
+      </li>
+      <li>
+        <a class="text-(--color-text)" href="https://www.notes.aandradeb.com/"
+          >Notes</a
         >
-            <li class='py-1.5'>
-                <a class='text-(--color-text)' href='/#about'>About</a>
-            </li>
-            <li>
-                <a class='text-(--color-text)' href='/#experience'>Experience</a
-                >
-            </li>
-            <li>
-                <a class='text-(--color-text)' href='/#projects'>Projects</a>
-            </li>
-            <li>
-                <a class='text-(--color-text)' href='/#contact'>Contact</a>
-            </li>
-            <li>
-                <a
-                    class='text-(--color-text)'
-                    href='https://www.notes.aandradeb.com/'>Notes</a
-                >
-            </li>
-            <li>
-                <a
-                    class='text-(--color-text)'
-                    href='https://www.notes.aandradeb.com/blog'>Blog</a
-                >
-            </li>
-        </ol>
-    </nav>
+      </li>
+      <li>
+        <a
+          class="text-(--color-text)"
+          href="https://www.notes.aandradeb.com/blog">Blog</a
+        >
+      </li>
+    </ol>
+  </nav>
 </aside>
 
 <style>
-    .not-active-menu,
-    .active-menu {
-        transition:
-            opacity 0.4s ease,
-            visibility 0.4s ease;
-    }
+  .not-active-menu,
+  .active-menu {
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+  }
 
-    .not-active-menu {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+  .not-active-menu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
-    .active-menu {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
+  .active-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
 </style>
