@@ -1,3 +1,7 @@
+---
+import ArrowLink from "./icons/ArrowLink.astro";
+---
+
 <aside
   id="hamburger-menu"
   class="flex flex-col justify-between fixed top-0 right-0 bottom-0 pt-[100px] w-full h-screen bg-[#25282E] not-active-menu"
@@ -20,13 +24,14 @@
       </li>
       <li>
         <a class="text-(--color-text)" href="https://www.notes.aandradeb.com/"
-          >Notes</a
+          >Notes<ArrowLink class="inline ml-1" /></a
         >
       </li>
       <li>
         <a
           class="text-(--color-text)"
-          href="https://www.notes.aandradeb.com/blog">Blog</a
+          href="https://www.notes.aandradeb.com/blog"
+          >Blog<ArrowLink class="inline ml-1" /></a
         >
       </li>
     </ol>

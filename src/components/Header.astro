@@ -2,6 +2,7 @@
 import Logo from "../components/Logo.astro";
 import Hamburger from "../components/Hamburger.astro";
 import HamburgerMenu from "../components/HamburgerMenu.astro";
+import ArrowLink from "./icons/ArrowLink.astro";
 ---
 
 <header
@@ -9,22 +10,18 @@ import HamburgerMenu from "../components/HamburgerMenu.astro";
   class="fixed top-0 flex w-full h-[100px] px-8 bg-(--color-bg) transition-all duration-300 ease-in-out transform z-50"
 >
   <nav class="w-full flex justify-between items-center">
-    <div class="flex items-center">
-      <Logo />
-      <div class="hidden lg:flex space-x-4 ml-4 text-xl">
-        <a class="text-gray-400" href="https://www.notes.aandradeb.com/"
-          >Notes</a
-        >
-        <a class="text-gray-400" href="https://www.notes.aandradeb.com/blog"
-          >Blog</a
-        >
-      </div>
-    </div>
-    <div class="hidden lg:flex space-x-4 text-xl">
-      <a class="text-gray-400" href="/#about">About</a>
-      <a class="text-gray-400" href="/#experience">Experience</a>
-      <a class="text-gray-400" href="/#projects">Projects</a>
-      <a class="text-gray-400" href="/#contact">Contact</a>
+    <Logo />
+    <div class="hidden lg:flex space-x-8 text-xl">
+      <a class="text-(--color-text)" href="/#about">About</a>
+      <a class="text-(--color-text)" href="/#experience">Experience</a>
+      <a class="text-(--color-text)" href="/#projects">Projects</a>
+      <a class="text-(--color-text)" href="/#contact">Contact</a>
+      <a class="text-(--color-text)" href="https://www.notes.aandradeb.com/"
+        >Notes<ArrowLink class="inline ml-1" /></a
+      >
+      <a class="text-(--color-text)" href="https://www.notes.aandradeb.com/blog"
+        >Blog<ArrowLink class="inline ml-1" /></a
+      >
     </div>
     <Hamburger />
   </nav>
