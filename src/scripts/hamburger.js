@@ -1,16 +1,27 @@
-var hamburger = document.getElementById('hamburger');
-var hamburgerMenu = document.getElementById('hamburger-menu');
+var hamburger = document.getElementById("hamburger");
+var hamburgerMenu = document.getElementById("hamburger-menu");
+const menuLinks = document.querySelectorAll(".menu-link");
 
-hamburger?.addEventListener('click', () => {
-  if (hamburger?.classList.contains('active')) {
-    hamburger?.classList.remove('active');
-    hamburger?.classList.add('not-active');
-    hamburgerMenu?.classList.remove('active-menu');
-    hamburgerMenu?.classList.add('not-active-menu');
+hamburger?.addEventListener("click", () => {
+  if (hamburger?.classList.contains("active")) {
+    hamburger?.classList.remove("active");
+    hamburger?.classList.add("not-active");
+    hamburgerMenu?.classList.remove("active-menu");
+    hamburgerMenu?.classList.add("not-active-menu");
   } else {
-    hamburger?.classList.remove('not-active');
-    hamburger?.classList.add('active');
-    hamburgerMenu?.classList.remove('not-active-menu');
-    hamburgerMenu?.classList.add('active-menu');
+    hamburger?.classList.remove("not-active");
+    hamburger?.classList.add("active");
+    hamburgerMenu?.classList.remove("not-active-menu");
+    hamburgerMenu?.classList.add("active-menu");
   }
+});
+
+// Hide hamburger menu when a link is clicked
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger?.classList.remove("active");
+    hamburger?.classList.add("not-active");
+    hamburgerMenu?.classList.remove("active-menu");
+    hamburgerMenu.classList.add("not-active-menu"); // Add class to hide the menu
+  });
 });
