@@ -21,7 +21,7 @@ const { title, description, img, source, live, tags, titleRibbon } =
 ---
 
 <article
-  class="bg-(--color-card) rounded-md border border-solid border-(--color-border) flex flex-col h-full relative"
+  class="rounded-md border border-solid border-(--border-normal) flex flex-col h-full relative"
 >
   <div>
     {titleRibbon && <Ribbon title={titleRibbon} />}
@@ -33,11 +33,11 @@ const { title, description, img, source, live, tags, titleRibbon } =
     />
   </div>
   <div class="p-6">
-    <h3 class="text-xl mb-4">{title}</h3>
-    <p class="text-(--color-text-secondary) text-sm mb-[1.5rem] grow">
+    <h3 class="text-(--text-normal) text-xl mb-4">{title}</h3>
+    <p class="text-(--text-muted) text-sm mb-[1.5rem] grow">
       {description}
     </p>
-    <ul class="flex flex-wrap gap-[0.5rem] mb-[1.5rem]">
+    <ul class="flex flex-wrap gap-2.5 mb-6">
       {tags.map((tag) => <Tag name={tag} />)}
     </ul>
     <footer class="flex justify-start gap-x-4">

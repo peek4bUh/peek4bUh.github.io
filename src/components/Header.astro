@@ -7,19 +7,33 @@ import ArrowLink from "./icons/ArrowLink.astro";
 
 <header
   id="header"
-  class="fixed top-0 flex w-full h-[100px] px-8 bg-(--color-bg) transition-all duration-300 ease-in-out transform z-50"
+  class="fixed top-0 flex w-full h-25 px-8 bg-(--background-primary) transition-all duration-300 ease-in-out transform z-50"
 >
   <nav class="w-full flex justify-between items-center">
     <Logo />
     <div class="hidden lg:flex space-x-8 text-xl">
-      <a class="text-(--color-text)" href="/#about">About</a>
-      <a class="text-(--color-text)" href="/#experience">Experience</a>
-      <a class="text-(--color-text)" href="/#projects">Projects</a>
-      <a class="text-(--color-text)" href="/#contact">Contact</a>
-      <a class="text-(--color-text)" href="https://www.notes.aandradeb.com/"
+      <a class="text-(--text-muted) hover:text-(--text-normal)" href="/#about"
+        >About</a
+      >
+      <a
+        class="text-(--text-muted) hover:text-(--text-normal)"
+        href="/#experience">Experience</a
+      >
+      <a
+        class="text-(--text-muted) hover:text-(--text-normal)"
+        href="/#projects">Projects</a
+      >
+      <a class="text-(--text-muted) hover:text-(--text-normal)" href="/#contact"
+        >Contact</a
+      >
+      <a
+        class="text-(--text-muted) hover:text-(--text-normal)"
+        href="https://www.notes.aandradeb.com/"
         >Notes<ArrowLink class="inline ml-1" /></a
       >
-      <a class="text-(--color-text)" href="https://www.notes.aandradeb.com/blog"
+      <a
+        class="text-(--text-muted) hover:text-(--text-normal)"
+        href="https://www.notes.aandradeb.com/blog"
         >Blog<ArrowLink class="inline ml-1" /></a
       >
     </div>
@@ -29,3 +43,11 @@ import ArrowLink from "./icons/ArrowLink.astro";
 </header>
 <script src="../scripts/hamburger.js"></script>
 <script src="../scripts/header.js"></script>
+
+<style>
+  .active {
+    height: 70px;
+    background-color: var(--background-primary-alt);
+    box-shadow: 0 10px 30px -10px var(--background-primary);
+  }
+</style>

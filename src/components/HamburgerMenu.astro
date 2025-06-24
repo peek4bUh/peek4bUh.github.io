@@ -4,36 +4,46 @@ import ArrowLink from "./icons/ArrowLink.astro";
 
 <aside
   id="hamburger-menu"
-  class="flex flex-col justify-between fixed top-0 right-0 bottom-0 pt-[100px] w-full h-screen bg-[#25282E] not-active-menu"
+  class="flex flex-col justify-between fixed top-0 right-0 bottom-0 pt-25 w-full h-screen bg-(--background-secondary) not-active-menu"
 >
   <nav class="w-full h-[75vh] flex justify-center items-center">
     <ol
       class="w-full h-[100%] flex flex-col justify-evenly items-center text-4xl font-bold uppercase"
     >
       <li class="py-1.5">
-        <a class="text-(--color-text) menu-link" href="/#about">About</a>
-      </li>
-      <li>
-        <a class="text-(--color-text) menu-link" href="/#experience"
-          >Experience</a
+        <a
+          class="text-(--text-muted) hover:text-(--text-normal) menu-link"
+          href="/#about">About</a
         >
       </li>
       <li>
-        <a class="text-(--color-text) menu-link" href="/#projects">Projects</a>
-      </li>
-      <li>
-        <a class="text-(--color-text) menu-link" href="/#contact">Contact</a>
+        <a
+          class="text-(--text-muted) hover:text-(--text-normal) menu-link"
+          href="/#experience">Experience</a
+        >
       </li>
       <li>
         <a
-          class="text-(--color-text) menu-link"
+          class="text-(--text-muted) hover:text-(--text-normal) menu-link"
+          href="/#projects">Projects</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-(--text-muted) hover:text-(--text-normal) menu-link"
+          href="/#contact">Contact</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-(--text-muted) hover:text-(--text-normal) menu-link"
           href="https://www.notes.aandradeb.com/"
           >Notes<ArrowLink class="inline ml-1" /></a
         >
       </li>
       <li>
         <a
-          class="text-(--color-text)"
+          class="text-(--text-muted) hover:text-(--text-normal)"
           href="https://www.notes.aandradeb.com/blog"
           >Blog<ArrowLink class="inline ml-1" /></a
         >

@@ -20,24 +20,28 @@ const { title, companyName, workplace, date, description, link, tags } =
   Astro.props;
 ---
 
-<div
-  class="absolute w-3 h-3 rounded-full mt-2 -start-1.5 border border-gray-900 bg-gray-700"
->
-</div>
-<h3 class="mb-1 text-lg font-semibold text-(--color-text)">
-  <a href={link} target="_blank" rel="noreferrer">
-    {title}<ArrowLink class="inline ml-1" /></a
+<li class="mb-10 ms-4">
+  <div
+    class="absolute w-3 h-3 rounded-full mt-2 -start-1.5 border border-(--border-focus) bg-(--border-normal)"
   >
-</h3>
-<h4 class="mb-2 text-sm font-normal text-gray-200">
-  {companyName} · {workplace}
-</h4>
-<time class="block mb-2 text-xs font-normal leading-none text-gray-200">
-  {date}
-</time>
-<p class="mb-4 text-gray-500">
-  {description}
-</p>
-<ul class="flex flex-wrap gap-2.5 mb-2">
-  {tags.map((tag) => <Tag name={tag} />)}
-</ul>
+  </div>
+  <h3 class="mb-1 text-lg font-semibold text-(--text-normal)">
+    <a href={link} target="_blank" rel="noreferrer">
+      {title}<ArrowLink class="inline ml-1" /></a
+    >
+  </h3>
+  <h4 class="mb-2 text-sm font-semibold text-(--text-normal)">
+    {companyName} · {workplace}
+  </h4>
+  <time
+    class="block mb-2 text-xs font-semibold leading-none text-(--text-normal)"
+  >
+    {date}
+  </time>
+  <p class="mb-4 text-(--text-muted) max-w-xl">
+    {description}
+  </p>
+  <ul class="flex flex-wrap gap-2.5 mb-2">
+    {tags.map((tag) => <Tag name={tag} />)}
+  </ul>
+</li>

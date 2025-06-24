@@ -15,34 +15,33 @@ const { title } = Astro.props;
   <body>
     <slot />
   </body>
+  <style is:global>
+    .btn {
+      display: inline-block;
+      background-color: var(--color-hover);
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--color-border);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--text-on-accent);
+      border-color: var(--text-on-accent);
+    }
+
+    .btn-primary:hover {
+      background-color: #4589d1;
+      border-color: #4589d1;
+    }
+  </style>
 </html>
-
-<style is:global>
-  .btn {
-    display: inline-block;
-    background-color: var(--color-hover);
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-
-  .btn:hover {
-    background-color: var(--color-border);
-    text-decoration: none;
-  }
-
-  .btn-primary {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-  }
-
-  .btn-primary:hover {
-    background-color: #4589d1;
-    border-color: #4589d1;
-  }
-</style>
